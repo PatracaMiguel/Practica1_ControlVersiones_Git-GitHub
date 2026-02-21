@@ -32,4 +32,21 @@ public class Tarea {
             System.out.println( "Tarea No." + tarea.id + " | " + " Nombre:" + tarea.nombreTarea + " | " + " Completada: " + tareaCompleta);
         }
     }
+
+    public static void eliminarTarea(int idTarea) {
+        boolean tareaExiste = false;
+
+        for (int i = 0; i < tareas.size(); i++) {
+            if (tareas.get(i).id == idTarea) {
+                tareas.remove(i);
+                System.out.println("Tarea eliminada");
+                tareaExiste = true;
+                break;
+            }
+        }
+
+        if (tareaExiste == false) {
+            System.out.println("Tarea no encontrada");
+        }
+    }
 }

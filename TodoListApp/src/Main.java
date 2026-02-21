@@ -18,6 +18,7 @@ public class Main {
             System.out.println("¿Qué opción eliges? ");
             opcion = entrada.nextInt();
             entrada.nextLine();
+            System.out.println("\n" );
 
             switch (opcion) {
                 case 1:
@@ -30,6 +31,18 @@ public class Main {
                 case 2:
                     Tarea.listarTareas();
                     break;
+                
+                case 4:
+                    if (Tarea.tareas.size() == 0) {
+                        System.out.println("No hay tareas por ahora");
+                    } else {
+                        System.out.println("ID de la tarea a eliminar");
+                        int idTarea = entrada.nextInt();
+                        Tarea.eliminarTarea(idTarea);
+                    }
+
+                    break;
+                    
             }
 
         }
