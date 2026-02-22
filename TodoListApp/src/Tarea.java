@@ -73,7 +73,7 @@ public class Tarea {
 
             tareaExiste = true;
 
-            guardarArchivo(); // importante para persistencia
+            guardarArchivo(); 
 
             break;
         }
